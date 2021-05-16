@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./home/home";
-import Tile from "./2048/2048";
+import Card from "./card/card.js";
 
 function App() {
   return (
     <>
       <Router>
         <Route path="/" exact component={Home} />
-        <Route path="/tile" component={Tile} />
+        <Route path="/card" component={Card} />
       </Router>
     </>
   );

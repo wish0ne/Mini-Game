@@ -1,0 +1,55 @@
+.Card {
+  background-color: #f0f5f9;
+  width: 650px;
+  height: 650px;
+  margin: 60px auto;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #52616a;
+}
+
+.Card-back {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 50px;
+  vertical-align: text-bottom;
+  display: inline-block;
+  width: 100px;
+  height: 140px;
+  margin: 9.5px 13.5px;
+  padding: 30px 0;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Card-back:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Card-back.front {
+  display: inline-block;
+  width: 100px;
+  height: 140px;
+  /* margin: 10px 13px; */
+  transform: rotateY(180deg);
+}
+
+.Card-button {
+  position: fixed;
+  top: 70px;
+  left: 300px;
+  width: 100px;
+  height: 100px;
+}
+
+.Card-score {
+  position: fixed;
+  top: 70px;
+  right: 300px;
+  font-size: 50px;
+}
+
+.Card-hidden {
+  visibility: hidden;
+}

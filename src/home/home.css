@@ -9,13 +9,21 @@
   border-color: #52616a;
 }
 
-.Home-2048 {
+.Home-Card {
   text-align: center;
   background-color: #c9d6de;
   display: inline-block;
   width: 250px;
   height: 250px;
   margin: 50px 25px 25px 50px;
+}
+
+.Home-2048 {
+  background-color: #c9d6de;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  margin: 25px 50px 50px 25px;
 }
 
 .Home-Tetris {
@@ -32,12 +40,4 @@
   width: 250px;
   height: 250px;
   margin: 25px 25px 50px 50px;
-}
-
-.Home-Card {
-  background-color: #c9d6de;
-  display: inline-block;
-  width: 250px;
-  height: 250px;
-  margin: 25px 50px 50px 25px;
 }

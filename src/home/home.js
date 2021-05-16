@@ -1,15 +1,15 @@
 import "./home.css";
 import { Link } from "react-router-dom";
 
-function Template({ location, history }) {
+function Template() {
   return (
     <div className="Home">
-      <Link to="/tile">
-        <div className="Home-2048">2048</div>
+      <Link to="/card">
+        <div className="Home-Card">카드 뒤집기 게임</div>
       </Link>
-      <div className="Home-Tetris">Tetris</div>
-      <div className="Home-Minesweeper">Minesweeper</div>
-      <div className="Home-Card">Card</div>
+      <div className="Home-Tetris">개발중..</div>
+      <div className="Home-Minesweeper">개발중..</div>
+      <div className="Home-2048">개발중..</div>
     </div>
   );
 }
