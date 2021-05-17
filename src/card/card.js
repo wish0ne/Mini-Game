@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./card.css";
 
 const emoji_list = [
-  "🧡",
-  "🧡",
-  "💛",
-  "💛",
-  "💚",
-  "💚",
-  "💙",
-  "💙",
+  "⛄",
+  "⛄",
+  "🧸",
+  "🧸",
+  "🍀",
+  "🍀",
+  "🌏",
+  "🌏",
   "💜",
   "💜",
-  "🤎",
-  "🤎",
-  "🖤",
-  "🖤",
-  "🤍",
-  "🤍",
-  "💗",
-  "💗",
-  "💕",
-  "💕",
+  "🍩",
+  "🍩",
+  "💻",
+  "💻",
+  "⏰",
+  "⏰",
+  "🎁",
+  "🎁",
+  "🎉",
+  "🎉",
 ];
 
 const selected = [];
@@ -34,18 +34,12 @@ function shuffle(array) {
   }
 }
 
-// function All_flip() {
-//   const all = document.querySelectorAll(".Card-back");
-//   all.forEach((ele) => {
-//     ele.classList.toggle("front");
-//     if (ele.classList[1] === "front") ele.innerHTML = "❔";
-//   });
-// }
-
 function Card(props) {
   const [start, setStart] = useState(true);
   const [score, setScore] = useState(0);
   const [correct, setCorrect] = useState(0);
+
+  const popup = useRef();
 
   const All_flip = () => {
     const all = document.querySelectorAll(".Card-back");
@@ -80,7 +74,6 @@ function Card(props) {
         selected.pop();
         setScore(score + 10);
         setCorrect(correct + 2);
-        console.log(correct);
       } else {
         selected.forEach((ele) => {
           setTimeout(() => {
@@ -105,8 +98,19 @@ function Card(props) {
     });
 
   if (correct === 20) {
-    console.log("end");
+    popup.current.classList.remove("hidden");
   }
+
+  const restart = () => {
+    setCorrect(0);
+    setScore(0);
+    setStart(true);
+    const all = document.querySelectorAll(".Card-back.hidden");
+    all.forEach((ele) => {
+      ele.classList.remove("hidden");
+    });
+    popup.current.classList.add("hidden");
+  };
 
   return (
     <>
@@ -124,6 +128,27 @@ function Card(props) {
       <div className="Card-score">
         Score
         <div>{score}</div>
+      </div>
+      <div className="Card-popup hidden" ref={popup}>
+        <div className="Card-popup_layer">
+          <div className="text_area">Score:{score}</div>
+          <div className="btn_area">
+            <button
+              type="button"
+              name="button"
+              className="Card-restart"
+              onClick={restart}
+            >
+              재시작
+            </button>
+            <Link to="/">
+              <button type="button" name="button" className="Card-exit">
+                종료
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="popup_dimmed"></div>
       </div>
     </>
   );
