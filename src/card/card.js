@@ -113,8 +113,8 @@ function Card(props) {
   };
 
   return (
-    <>
-      <div className="Card">
+    <div className="Card">
+      <div className="Card-board">
         <table>
           <tr>{CardList([1, 2, 3, 4, 5])}</tr>
           <tr>{CardList([6, 7, 8, 9, 10])}</tr>
@@ -123,7 +123,7 @@ function Card(props) {
         </table>
       </div>
       <Link to="/">
-        <button className="Card-button">뒤로가기</button>
+        <button className="Card-button">🔙뒤로가기</button>
       </Link>
       <div className="Card-score">
         Score
@@ -150,7 +150,7 @@ function Card(props) {
         </div>
         <div className="popup_dimmed"></div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,8 @@
 .Card {
+  font-family: DungGeunMo;
+}
+
+.Card-board {
   width: 650px;
   height: 650px;
   margin: 60px auto;
@@ -32,11 +36,20 @@
 }
 
 .Card-button {
+  font-size: 30px;
+  font-family: DungGeunMo;
+  border-style: none;
   position: fixed;
   top: 70px;
-  left: 300px;
-  width: 100px;
+  left: 250px;
+  width: 200px;
   height: 100px;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.Card-button:hover {
+  cursor: pointer;
 }
 
 .Card-score {
