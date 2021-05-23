@@ -6,9 +6,11 @@ function Template() {
     <div className="Home">
       <h1 className="Home-Title">🎮React Mini Game🎮</h1>
       <Link to="/card">
-        <div className="Home-Menu Home-Card">🃏Card Flip🃏</div>
+        <div className="Home-Menu Home-Card">Card Matching</div>
       </Link>
-      <div className="Home-Menu Home-2048">개발중..</div>
+      <Link to="/snake">
+        <div className="Home-Menu Home-Snake">Snake Game</div>
+      </Link>
     </div>
   );
 }

@@ -85,8 +85,9 @@
 }
 
 .text_area {
-  padding: 50px 30px 30px;
+  padding: 30px 30px;
   text-align: center;
+  font-size: 40px;
 }
 
 .btn_area {
@@ -105,7 +106,7 @@
   font-size: 15px;
   font-weight: bold;
   border: 0;
-  background: pink;
+  background: rgb(196, 196, 196);
   /*button태그의 기본 속성 : box-sizing:border-box;
     따라서 기본적으로 width값 안에 border영역까지 포함됨*/
 }
@@ -117,7 +118,7 @@
   font-size: 15px;
   font-weight: bold;
   border: 0;
-  background: lightblue;
+  background: rgb(128, 128, 128);
 }
 
 .popup_dimmed {

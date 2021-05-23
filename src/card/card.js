@@ -34,7 +34,7 @@ function shuffle(array) {
   }
 }
 
-function Card(props) {
+function Card() {
   const [start, setStart] = useState(true);
   const [score, setScore] = useState(0);
   const [correct, setCorrect] = useState(0);
@@ -56,34 +56,36 @@ function Card(props) {
   }
 
   const flip = (e, num) => {
-    e.target.classList.toggle("front");
-    if (e.target.classList[1] === "front") {
-      e.target.innerHTML = "❔";
-    } else {
-      e.target.innerHTML = emoji_list[num - 1];
-    }
-    selected.push(e.target);
-    if (selected.length === 2) {
-      if (selected[0].innerHTML === selected[1].innerHTML) {
-        selected.forEach((ele) => {
-          setTimeout(() => {
-            ele.classList.add("hidden");
-          }, 700);
-        });
-        selected.pop();
-        selected.pop();
-        setScore(score + 10);
-        setCorrect(correct + 2);
+    if (e.target.classList.contains("front")) {
+      e.target.classList.toggle("front");
+      if (e.target.classList[1] === "front") {
+        e.target.innerHTML = "❔";
       } else {
-        selected.forEach((ele) => {
-          setTimeout(() => {
-            ele.classList.toggle("front");
-            ele.innerHTML = "❔";
-          }, 1000);
-        });
-        selected.pop();
-        selected.pop();
-        setScore(score - 5);
+        e.target.innerHTML = emoji_list[num - 1];
+      }
+      selected.push(e.target);
+      if (selected.length === 2) {
+        if (selected[0].innerHTML === selected[1].innerHTML) {
+          selected.forEach((ele) => {
+            setTimeout(() => {
+              ele.classList.add("hidden");
+            }, 700);
+          });
+          selected.pop();
+          selected.pop();
+          setScore(score + 10);
+          setCorrect(correct + 2);
+        } else {
+          selected.forEach((ele) => {
+            setTimeout(() => {
+              ele.classList.toggle("front");
+              ele.innerHTML = "❔";
+            }, 1000);
+          });
+          selected.pop();
+          selected.pop();
+          setScore(score - 5);
+        }
       }
     }
   };
@@ -116,14 +118,16 @@ function Card(props) {
     <div className="Card">
       <div className="Card-board">
         <table>
-          <tr>{CardList([1, 2, 3, 4, 5])}</tr>
-          <tr>{CardList([6, 7, 8, 9, 10])}</tr>
-          <tr>{CardList([11, 12, 13, 14, 15])}</tr>
-          <tr>{CardList([16, 17, 18, 19, 20])}</tr>
+          <tbody>
+            <tr>{CardList([1, 2, 3, 4, 5])}</tr>
+            <tr>{CardList([6, 7, 8, 9, 10])}</tr>
+            <tr>{CardList([11, 12, 13, 14, 15])}</tr>
+            <tr>{CardList([16, 17, 18, 19, 20])}</tr>
+          </tbody>
         </table>
       </div>
       <Link to="/">
-        <button className="Card-button">🔙뒤로가기</button>
+        <button className="Card-button">🔙Back</button>
       </Link>
       <div className="Card-score">
         Score
@@ -131,7 +135,10 @@ function Card(props) {
       </div>
       <div className="Card-popup hidden" ref={popup}>
         <div className="Card-popup_layer">
-          <div className="text_area">Score:{score}</div>
+          <div className="text_area">
+            Score
+            <div>{score}</div>
+          </div>
           <div className="btn_area">
             <button
               type="button"
