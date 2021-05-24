@@ -104,22 +104,19 @@ function Snake() {
 
   useInterval(moveSnake, 100);
 
-  function useInterval(callback, delay) {
+  function useInterval(callback, time) {
     const savedCallback = useRef();
 
-    // // Remember the latest callback.
     useEffect(() => {
       savedCallback.current = callback;
     }, [callback]);
 
-    // Set up the interval.
     useEffect(() => {
-      function tick() {
-        savedCallback.current();
-      }
       if (!end) {
-        let id = setInterval(tick, delay);
-        return () => clearInterval(id);
+        let timer = setInterval(() => {
+          savedCallback.current();
+        }, time);
+        return () => clearInterval(timer);
       }
     }, [end]);
   }
