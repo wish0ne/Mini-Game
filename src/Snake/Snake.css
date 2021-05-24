@@ -4,15 +4,22 @@
   top: 50px;
   left: 500px;
   border-collapse: collapse;
-}
-
-.Snake-Row {
-}
-.Snake-Cell {
-  width: 30px;
-  height: 30px;
-
   border-style: solid;
+}
+
+.Snake-Cell {
+  width: 20px;
+  height: 20px;
+}
+
+.snake {
+  background-color: black;
+}
+
+.food {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url(../images/heart.png);
 }
 
 .Snake-button {
@@ -30,4 +37,80 @@
 
 .Snake-button:hover {
   cursor: pointer;
+}
+
+.Snake-Score {
+  font-family: DungGeunMo;
+  font-size: 30px;
+  text-align: center;
+  position: fixed;
+  top: 70px;
+  right: 300px;
+  font-size: 50px;
+}
+
+.Snake-popup {
+  font-family: DungGeunMo;
+  visibility: visible;
+  position: fixed; /*팝업 전체를 콘텐츠보다 위로 띄움*/
+  /*dimmed 영역이 콘텐츠가 길어질때 같이 길어지게 하기 위해 relative대신 fixed 사용. fixed는 뷰포트, 즉 현재 보이는 브라우저 화면 사이즈를 기준으로 하기 때문에 스크롤을 내려도 딤드 레이어가 노출됨*/
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Snake-popup_layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 150px;
+  padding-bottom: 50px;
+  margin: auto;
+  background: #fff;
+  z-index: 10;
+}
+
+.text_area {
+  padding: 30px 30px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.btn_area {
+  font-family: DungGeunMo;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  overflow: hidden; /*float 해제*/
+}
+
+.Snake-exit {
+  color: white;
+  float: left;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  border: 0;
+  background: rgb(0, 0, 0);
+}
+
+.popup_dimmed {
+  position: absolute; /*띄워줌*/
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+}
+
+.hidden {
+  visibility: hidden;
 }
