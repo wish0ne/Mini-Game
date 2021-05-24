@@ -39,6 +39,8 @@ function Snake() {
               return <td key={index} className="Snake-Cell snake"></td>;
             case "food":
               return <td key={index} className="Snake-Cell food"></td>;
+            default:
+              return <td></td>;
           }
         })}
       </tr>
@@ -102,9 +104,10 @@ function Snake() {
     displaySnake();
   };
 
-  useInterval(moveSnake, 100);
+  useInterval(moveSnake);
 
-  function useInterval(callback, time) {
+  function useInterval(callback) {
+    const time = 100;
     const savedCallback = useRef();
 
     useEffect(() => {
@@ -118,7 +121,7 @@ function Snake() {
         }, time);
         return () => clearInterval(timer);
       }
-    }, [end]);
+    }, []);
   }
 
   const gameOver = () => {
