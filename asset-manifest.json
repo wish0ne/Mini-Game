@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/wish1030/Mini-Game/static/css/main.6a00da68.chunk.css",
-    "main.js": "/wish1030/Mini-Game/static/js/main.9194a830.chunk.js",
-    "main.js.map": "/wish1030/Mini-Game/static/js/main.9194a830.chunk.js.map",
-    "runtime-main.js": "/wish1030/Mini-Game/static/js/runtime-main.1da9967a.js",
-    "runtime-main.js.map": "/wish1030/Mini-Game/static/js/runtime-main.1da9967a.js.map",
-    "static/js/2.f125b7d1.chunk.js": "/wish1030/Mini-Game/static/js/2.f125b7d1.chunk.js",
-    "static/js/2.f125b7d1.chunk.js.map": "/wish1030/Mini-Game/static/js/2.f125b7d1.chunk.js.map",
-    "index.html": "/wish1030/Mini-Game/index.html",
-    "static/css/main.6a00da68.chunk.css.map": "/wish1030/Mini-Game/static/css/main.6a00da68.chunk.css.map",
-    "static/js/2.f125b7d1.chunk.js.LICENSE.txt": "/wish1030/Mini-Game/static/js/2.f125b7d1.chunk.js.LICENSE.txt"
+    "main.css": "/Mini-Game/static/css/main.6a00da68.chunk.css",
+    "main.js": "/Mini-Game/static/js/main.9194a830.chunk.js",
+    "main.js.map": "/Mini-Game/static/js/main.9194a830.chunk.js.map",
+    "runtime-main.js": "/Mini-Game/static/js/runtime-main.dac7eed0.js",
+    "runtime-main.js.map": "/Mini-Game/static/js/runtime-main.dac7eed0.js.map",
+    "static/js/2.f125b7d1.chunk.js": "/Mini-Game/static/js/2.f125b7d1.chunk.js",
+    "static/js/2.f125b7d1.chunk.js.map": "/Mini-Game/static/js/2.f125b7d1.chunk.js.map",
+    "index.html": "/Mini-Game/index.html",
+    "static/css/main.6a00da68.chunk.css.map": "/Mini-Game/static/css/main.6a00da68.chunk.css.map",
+    "static/js/2.f125b7d1.chunk.js.LICENSE.txt": "/Mini-Game/static/js/2.f125b7d1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1da9967a.js",
+    "static/js/runtime-main.dac7eed0.js",
     "static/js/2.f125b7d1.chunk.js",
     "static/css/main.6a00da68.chunk.css",
     "static/js/main.9194a830.chunk.js"
