@@ -9,9 +9,11 @@
 }
 
 .Card-back {
+  color: black;
+  background-color: white;
   box-sizing: border-box;
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
   vertical-align: text-bottom;
   display: inline-block;
   width: 100px;
@@ -20,11 +22,10 @@
   padding: 30px 0;
   transition: transform 1s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Card-back:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .Card-back.front {
@@ -35,13 +36,18 @@
   transform: rotateY(360deg);
 }
 
+.Card-back.front:hover {
+  color: blue;
+}
+
 .Card-button {
-  font-size: 30px;
+  color: white;
+  font-size: 50px;
   font-family: DungGeunMo;
   border-style: none;
   position: fixed;
   top: 70px;
-  left: 250px;
+  left: 200px;
   width: 200px;
   height: 100px;
   border-radius: 5px;
@@ -50,6 +56,7 @@
 
 .Card-button:hover {
   cursor: pointer;
+  font-size: 60px;
 }
 
 .Card-score {
@@ -76,59 +83,69 @@
   right: 0;
   bottom: 0;
   left: 0;
-  width: 300px;
-  height: 150px;
-  padding-bottom: 50px;
-  margin: auto;
-  background: #fff;
+  width: 800px;
+  height: 300px;
+  padding-bottom: 100px;
+  margin: 150px auto;
   z-index: 10;
 }
 
-.text_area {
-  padding: 30px 30px;
+.Card-text_area {
   text-align: center;
-  font-size: 40px;
+  font-size: 100px;
+}
+.Card-popup-score {
+  font-size: 80px;
+  margin: 20px 0;
 }
 
-.btn_area {
+.Card-btn_area {
+  line-height: normal;
+  text-align: center;
+  font-size: 80px;
+  font-family: DungGeunMo;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 50px;
   overflow: hidden; /*float 해제*/
+  height: 80px;
 }
 
 .Card-restart {
   float: left;
   width: 50%;
-  height: 100%;
-  font-size: 15px;
   font-weight: bold;
-  border: 0;
-  background: rgb(196, 196, 196);
   /*button태그의 기본 속성 : box-sizing:border-box;
     따라서 기본적으로 width값 안에 border영역까지 포함됨*/
+}
+
+.Card-restart:hover {
+  font-size: 85px;
+  color: yellow;
+  cursor: pointer;
 }
 
 .Card-exit {
   float: left;
   width: 50%;
   height: 100%;
-  font-size: 15px;
   font-weight: bold;
-  border: 0;
-  background: rgb(128, 128, 128);
 }
 
-.popup_dimmed {
+.Card-exit:hover {
+  font-size: 85px;
+  color: yellow;
+}
+
+.Card-popup_dimmed {
   position: absolute; /*띄워줌*/
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background: #000;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 .hidden {

@@ -3,26 +3,26 @@ import React, { useState, useRef } from "react";
 import "./card.css";
 
 const emoji_list = [
-  "⛄",
-  "⛄",
-  "🧸",
-  "🧸",
-  "🍀",
-  "🍀",
-  "🌏",
-  "🌏",
-  "💜",
-  "💜",
-  "🍩",
-  "🍩",
-  "💻",
-  "💻",
-  "⏰",
-  "⏰",
-  "🎁",
-  "🎁",
-  "🎉",
-  "🎉",
+  "●",
+  "●",
+  "☺",
+  "☺",
+  "☀",
+  "☀",
+  "♣",
+  "♣",
+  "♘",
+  "♘",
+  "♪",
+  "♪",
+  "♧",
+  "♧",
+  "★",
+  "★",
+  "☁",
+  "☁",
+  "♔",
+  "♔",
 ];
 
 const selected = [];
@@ -45,7 +45,7 @@ function Card() {
     const all = document.querySelectorAll(".Card-back");
     all.forEach((ele) => {
       ele.classList.add("front");
-      ele.innerHTML = "❔";
+      ele.innerHTML = "?";
     });
   };
 
@@ -59,7 +59,7 @@ function Card() {
     if (e.target.classList.contains("front")) {
       e.target.classList.toggle("front");
       if (e.target.classList[1] === "front") {
-        e.target.innerHTML = "❔";
+        e.target.innerHTML = "?";
       } else {
         e.target.innerHTML = emoji_list[num - 1];
       }
@@ -79,7 +79,7 @@ function Card() {
           selected.forEach((ele) => {
             setTimeout(() => {
               ele.classList.toggle("front");
-              ele.innerHTML = "❔";
+              ele.innerHTML = "?";
             }, 1000);
           });
           selected.pop();
@@ -127,7 +127,7 @@ function Card() {
         </table>
       </div>
       <Link to="/">
-        <button className="Card-button">🔙Back</button>
+        <button className="Card-button">Back</button>
       </Link>
       <div className="Card-score">
         Score
@@ -135,27 +135,20 @@ function Card() {
       </div>
       <div className="Card-popup hidden" ref={popup}>
         <div className="Card-popup_layer">
-          <div className="text_area">
-            Score
-            <div>{score}</div>
+          <div className="Card-text_area">
+            GAME OVER
+            <div className="Card-popup-score"> Score:{score}</div>
           </div>
-          <div className="btn_area">
-            <button
-              type="button"
-              name="button"
-              className="Card-restart"
-              onClick={restart}
-            >
-              재시작
-            </button>
+          <div className="Card-btn_area">
+            <div className="Card-restart" onClick={restart}>
+              RESTART
+            </div>
             <Link to="/">
-              <button type="button" name="button" className="Card-exit">
-                종료
-              </button>
+              <div className="Card-exit">EXIT</div>
             </Link>
           </div>
         </div>
-        <div className="popup_dimmed"></div>
+        <div className="Card-popup_dimmed"></div>
       </div>
     </div>
   );

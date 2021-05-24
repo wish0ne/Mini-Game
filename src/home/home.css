@@ -1,36 +1,48 @@
+a {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f59000;
+}
+
+/*reset css*/
+
 .Home {
   font-family: DungGeunMo;
   width: 800px;
   height: 350px;
-  margin: 130px auto;
+  margin: 0 auto;
   text-align: center;
 }
 
-.Home-Snake {
-  font-size: 50px;
+.Home-Title {
+  color: white;
+  font-size: 150px;
 }
 
 .Home-Menu {
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
   display: inline-block;
-  width: 300px;
-  height: 300px;
-  margin: 25px 40px;
-  padding: 10px 0;
-  box-sizing: border-box;
-  border-radius: 6%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  font-size: 50px;
 }
 
-.Home-Menu:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.Home-Card:hover {
+  font-size: 60px;
+  color: yellow;
 }
 
-.Home-Menu.Home-Card {
-  background-image: url(../images/card.png);
-  background-repeat: no-repeat;
-  background-size: 180px 230px;
-  background-position: center 55px;
+.Home-Snake {
+  margin: 30px 0 0;
+}
+
+.Home-Snake:hover {
+  font-size: 60px;
+  color: yellow;
 }

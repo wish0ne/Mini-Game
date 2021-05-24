@@ -138,23 +138,21 @@ function Snake() {
         {score}
       </div>
       <Link to="/">
-        <button className="Snake-button">🔙Back</button>
+        <button className="Snake-button">Back</button>
       </Link>
       <div className="Snake-popup hidden" ref={popup}>
         <div className="Snake-popup_layer">
-          <div className="text_area">
-            Score
-            <div>{score}</div>
+          <div className="Snake-text_area">
+            GAME OVER
+            <div className="Snake-popup-score">Score : {score}</div>
           </div>
-          <div className="btn_area">
+          <div className="Snake-btn_area">
             <Link to="/">
-              <button type="button" name="button" className="Snake-exit">
-                exit
-              </button>
+              <div className="Snake-exit">EXIT</div>
             </Link>
           </div>
         </div>
-        <div className="popup_dimmed"></div>
+        <div className="Snake-popup_dimmed"></div>
       </div>
     </div>
   );

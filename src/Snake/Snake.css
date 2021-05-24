@@ -13,7 +13,7 @@
 }
 
 .snake {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .food {
@@ -23,7 +23,8 @@
 }
 
 .Snake-button {
-  font-size: 30px;
+  color: white;
+  font-size: 50px;
   font-family: DungGeunMo;
   border-style: none;
   position: fixed;
@@ -36,6 +37,7 @@
 }
 
 .Snake-button:hover {
+  font-size: 60px;
   cursor: pointer;
 }
 
@@ -44,8 +46,8 @@
   font-size: 30px;
   text-align: center;
   position: fixed;
-  top: 70px;
-  right: 300px;
+  top: 100px;
+  right: 260px;
   font-size: 50px;
 }
 
@@ -61,33 +63,39 @@
 }
 
 .Snake-popup_layer {
+  color: white;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 300px;
-  height: 150px;
-  padding-bottom: 50px;
-  margin: auto;
-  background: #fff;
+  width: 800px;
+  height: 300px;
+  padding-bottom: 100px;
+  margin: 150px auto;
   z-index: 10;
 }
 
-.text_area {
-  padding: 30px 30px;
+.Snake-text_area {
   text-align: center;
-  font-size: 40px;
+  font-size: 100px;
 }
 
-.btn_area {
+.Snake-popup-score {
+  font-size: 80px;
+  margin: 20px 0;
+}
+
+.Snake-btn_area {
   font-family: DungGeunMo;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 50px;
+  height: 80px;
   overflow: hidden; /*float 해제*/
+  text-align: center;
+  font-size: 80px;
 }
 
 .Snake-exit {
@@ -95,20 +103,23 @@
   float: left;
   width: 100%;
   height: 100%;
-  font-size: 15px;
+  font-size: 80px;
   font-weight: bold;
-  border: 0;
-  background: rgb(0, 0, 0);
 }
 
-.popup_dimmed {
+.Snake-exit:hover {
+  font-size: 85px;
+  color: yellow;
+}
+
+.Snake-popup_dimmed {
   position: absolute; /*띄워줌*/
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background: #000;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .hidden {
