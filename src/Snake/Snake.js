@@ -104,24 +104,26 @@ function Snake() {
     displaySnake();
   };
 
-  useInterval(moveSnake);
+  useInterval(moveSnake, end ? null : 100);
 
-  function useInterval(callback) {
-    const time = 100;
+  function useInterval(callback, time) {
     const savedCallback = useRef();
 
     useEffect(() => {
       savedCallback.current = callback;
-    }, [callback]);
+    });
 
     useEffect(() => {
-      if (!end) {
-        let timer = setInterval(() => {
-          savedCallback.current();
-        }, time);
-        return () => clearInterval(timer);
+      function tick() {
+        savedCallback.current();
       }
-    }, []);
+      if (time !== null) {
+        let timer = setInterval(tick, time);
+        return () => {
+          clearInterval(timer);
+        };
+      }
+    }, [time]);
   }
 
   const gameOver = () => {
