@@ -8,7 +8,7 @@
 # React Mini-Game
 ### 🎮 React Study Final Project<br>
 ### 🎮 Card matching game & Snake game with React
-### 🎮 [Play game here!](https://wish1030.github.io/Mini-Game/) 
+### 🎮 [Play game here!](https://wish0ne.github.io/Mini-Game) 
 
 <br>
 
